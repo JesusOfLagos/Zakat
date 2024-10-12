@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.hero {
+	min-height: 100vh;
+	text-align: center;
+	padding: 4rem 2rem 0 4rem;
+
+	.text-section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		h1 {
+			text-transform: capitalize;
+			padding: 1.25rem 0;
+			font-size: 3.25rem;
+			font-weight: 900;
+			max-width: 1024px;
+		}
+		p {
+			color: #545454;
+			max-width: 900px;
+			font-size: 1.25rem;
+		}
+	}
+	.image-section {
+		overflow: hidden;
+		padding: 2rem 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		img {
+			overflow: hidden;
+			max-width: 98vw;
+		}
+	}
+}
+
+button {
+	cursor: pointer;
+	background-color: #49c4a2;
+	color: white;
+	padding: 1rem;
+	border-radius: 0.75rem;
+	font-size: 1.25rem;
+	text-transform: capitalize;
+	border: none;
+	display: flex;
+	align-items: center;
+	transform: scale(0.75);
+	transition: all ease-in-out 500ms;
+	&:hover {
+		transform: scale(0.95);
+	}
+}
+
+
+
+@layer utilities {
+	nav {
+		@apply flex 
+		w-screen justify-between items-center py-2 px-4 
+		text-xl text-[#212121] shadow;
+	}
+	.nav-logo {
+		@apply flex items-center;
+	}
+	.nav-list {
+		@apply hidden gap-4 relative text-2xl capitalize cursor-pointer justify-center lg:flex;
+	}
+	.nav-list div {
+		@apply flex items-center;
+	}
+	.nav-btn {
+		@apply hidden lg:flex;
+	}
+	.sublist {
+		@apply bg-white p-2 flex flex-col gap-4 shadow-sm w-[160px]  absolute rounded-xl top-6 z-10;
+	}
+	.sublist li {
+		@apply p-2;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.hero {
+	}
+}
+
+
+@layer utilities {
+	.cards-section {
+		@apply p-4 flex gap-1 max-w-[1200px] w-full my-8 md:flex-row;
+	}
+	.card {
+		@apply border border-[#49c4a2] p-2 flex flex-col justify-center items-center rounded-lg gap-2 mx-2 min-w-[250px];
+	}
+	.program-card {
+		@apply border border-[#49c4a2] p-6 flex justify-center items-center rounded-lg gap-2 mx-2 m-8 min-w-[500px];
+	}
+	.card div {
+		@apply flex flex-col justify-center items-center text-center gap-2 p-2;
+	}
+	.card div h3 {
+		@apply w-full text-2xl font-bold;
+	}
+	.card-text {
+		@apply hidden flex-col justify-between items-stretch h-full gap-4 p-1;
+	}
+	.card-btn {
+		@apply rounded-full self-start p-2 bg-transparent hover:text-white;
+	}
+}
+
+@layer utilities {
+	.text-balance {
+		text-wrap: balance;
+	}
+	.mysection {
+		@apply text-center py-8  px-4  max-w-[1200px] min-h-screen m-auto overflow-hidden gap-4 flex flex-col items-center justify-center;
+	}
+	.mysection .text-section {
+		@apply flex flex-col items-center gap-2 text-xl max-w-[900px];
+	}
+	.text-section h2 {
+		@apply text-3xl font-bold;
+	}
+	.subheading {
+		@apply tracking-[10px]  text-base font-bold;
+	}
+	.subheading h2 {
+		@apply capitalize py-4 text-4xl  max-w-[1024px] font-extrabold;
+	}
+	.subheading p {
+		@apply text-[#545454] max-w-[900px] text-3xl;
+	}
+}

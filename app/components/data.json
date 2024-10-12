@@ -1,0 +1,119 @@
+{
+    "footerList": {
+		"contact": {
+			"heading": "Contact",
+			"body": [
+				{
+					"value": "monit@gmail.com",
+					"link": "monitg@gmail.com"
+				},
+				{
+					"value": "CEO",
+					"link": "CEO"
+				},
+				{
+					"value": "CTO",
+					"link": "CTO"
+				},
+				{
+					"value": "CMO",
+					"link": "CMO"
+				}
+			]
+		},
+		"pages": {
+			"heading": "Pages",
+			"body": [
+				{
+					"value": "About Us",
+					"link": "/"
+				},
+				{
+					"value": "Our Programs",
+					"link": "/"
+				},
+				{
+					"value": "The Finance School",
+					"link": "/"
+				},
+				{
+					"value": "Mission",
+					"link": "/"
+				},
+				{
+					"value": "Blogs",
+					"link": "/"
+				},
+				{
+					"value": "Newsletters",
+					"link": "/"
+				}
+			]
+		},
+		"others": {
+			"heading": "Useful Links",
+			"body": [
+				{
+					"value": "Join Movit",
+					"link": "/"
+				},
+				{
+					"value": "CSR Drive",
+					"link": "/"
+				},
+				{
+					"value": "Invite A Friend",
+					"link": "/"
+				}
+			]
+		},
+		"office": {
+			"heading": "Office",
+			"body": [
+				{
+					"value": "House 5, Admiralty way, Lekki Phase 1, Lekki, Lagos.",
+					"link": "/"
+				},
+				{
+					"value": "Community Drive",
+					"link": "/"
+				}
+			]
+		},
+		"downloads": {
+			"heading": "Download",
+			"body": [
+				{
+					"value": "/playstore.svg",
+					"link": "/"
+				},
+				{
+					"value": "/appstore.svg",
+					"link": "/"
+				}
+			]
+		}
+	},
+		"FAQs": [
+		  {
+			"Q": "What is Monit?",
+			"A": "Monit is a financial education platform dedicated to empowering individuals with the knowledge and tools needed to manage their finances effectively and achieve financial independence."
+		  },
+		  {
+			"Q": "How can I join Monit?",
+			"A": "Joining Monit is simple! Sign up on our website or through our mobile app to access a wealth of financial resources, courses, and community support. Membership is available to anyone interested in improving their financial literacy."
+		  },
+		  {
+			"Q": "What types of programs does Monit offer?",
+			"A": "Monit offers a variety of programs, including online courses, webinars, interactive workshops, and one-on-one financial coaching. Our programs are designed to enhance your understanding of personal finance, investing, budgeting, and more."
+		  },
+		  {
+			"Q": "How can I contribute to Monit?",
+			"A": "You can contribute to Monit by participating in our programs, sharing your success stories, and paying for premium memberships. Your support helps us continue to provide valuable resources and develop new content for our community."
+		  },
+		  {
+			"Q": "Who can I contact for more information or assistance?",
+			"A": "For more information or assistance, you can reach out to our support team through our website's Contact Us page or via our social media channels. We are here to help you on your financial journey."
+		  }
+		]
+}
