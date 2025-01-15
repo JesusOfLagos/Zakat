@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -70,13 +71,13 @@ body {
 
 button {
 	cursor: pointer;
-	background-color: #49c4a2;
+	/* background-color: #49c4a2; */
 	color: white;
 	padding: 1rem;
 	border-radius: 0.75rem;
 	font-size: 1.25rem;
 	text-transform: capitalize;
-	border: none;
+	/* border: none; */
 	display: flex;
 	align-items: center;
 	transform: scale(0.75);
@@ -86,6 +87,49 @@ button {
 	}
 }
 
+
+@keyframes slideIn {
+	0% {
+	  transform: translateY(20px);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateY(0);
+	  opacity: 1;
+	}
+  }
+  
+  .animate-slide-in {
+	animation: slideIn 1s ease-out forwards;
+  }
+  
+  .delay-100 {
+	animation-delay: 100ms;
+  }
+  
+  .delay-200 {
+	animation-delay: 200ms;
+  }
+  
+  .delay-300 {
+	animation-delay: 300ms;
+  }
+  
+
+
+@keyframes scrollVertical {
+	0% {
+	  transform: translateY(0);
+	}
+	100% {
+	  transform: translateY(-100%);
+	}
+  }
+  
+  .animate-scroll-vertical {
+	animation: scrollVertical 10s linear infinite;
+  }
+  
 
 
 @layer utilities {

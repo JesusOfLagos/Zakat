@@ -1,39 +1,40 @@
+'use client'
+
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
-
-const NavItem = ({ href, children, hasDropdown = false }: { href: string; children: React.ReactNode; hasDropdown?: boolean }) => (
-  <li className="relative group">
-    <Link href={href} className="text-white hover:text-orange-400 transition-colors flex items-center">
-      {children}
-      {hasDropdown && <ChevronDown className="ml-1 w-4 h-4" />}
-    </Link>
-  </li>
-)
+import quest from '@/public/quest.svg'
+import { MissionAndVision, Vision } from './vision'
+import { TeamCards } from './team'
+import { FAQS } from '../components/faq'
+import { NavBar } from '../components/navbar'
+import { CoreValues } from './values'
+import { Footer } from '../components/footer'
 
 const InfoSection = ({ title, content }: { title: string; content: string }) => (
-  <div className="bg-indigo-800 rounded-lg p-6 mb-8 relative overflow-hidden">
-    <div className="absolute -left-24 -top-24 w-64 h-64 bg-orange-500 rounded-full opacity-50 transform -rotate-45"></div>
-    <h2 className="text-3xl font-bold mb-4 relative z-10">{title}</h2>
-    <p className="text-gray-300 relative z-10">{content}</p>
+  <div className="relative bg-transparent rounded-lg p-6 mb-8 overflow-hidden border-[#4B4B4B] border-2">
+    <Image
+      src={quest.src}
+      className="object-cover absolute top-0 left-0 z-0 ml-10"
+      alt="ZakatChain"
+      // layout="fill"
+      height={240}
+      width={240}
+    />
+    <div className="relative z-10 bg-gradient-to-b from-black/50 to-transparent p-6 rounded-lg">
+      <h2 className="text-3xl font-bold mb-4 text-white">{title}</h2>
+      <p className="text-gray-300">{content}</p>
+    </div>
   </div>
-)
+);
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-indigo-900 text-white">
-      <header className="container mx-auto py-6 px-4 flex justify-between items-center">
-        <Image src="/zakatchain-logo.svg" alt="ZakatChain" width={150} height={40} />
-        <nav>
-          <ul className="flex space-x-6">
-            <NavItem href="/wallet">Wallet</NavItem>
-            <NavItem href="/what-we-do" hasDropdown>What We Do</NavItem>
-            <NavItem href="/outreach">Outreach</NavItem>
-            <NavItem href="/community" hasDropdown>Community</NavItem>
-          </ul>
-        </nav>
-      </header>
-
+    <div className="min-h-screen bg-[#17163E] text-white">
+      <section className='flex justify-center'>
+        <NavBar />
+      </section>
       <main className="container mx-auto px-4 py-12">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -69,27 +70,72 @@ export default function AboutPage() {
           those in need through partnered foundations, orphanages, and Muslim Charity Organizations."
         />
 
-        <section className="bg-indigo-800 rounded-lg p-6 mb-8">
-          <h2 className="text-3xl font-bold mb-8 text-center">Whom We Serve</h2>
-          <div className="flex flex-col items-center space-y-4">
-            <div className="flex items-center space-x-4">
-              <span>Muslims in Crypto that want to pay Zakat</span>
-              <span className="text-orange-400">⟶</span>
-              <span>Muslims in Crypto that want to do Sodaqaat</span>
-            </div>
-            <div className="h-8 border-l-2 border-orange-400"></div>
-            <div>
-              Anybody that want to donate to any charity cause we have.
-            </div>
+<section className="bg-transparent rounded-lg p-6 border-[#4B4B4B] border-2 my-28">
+  <div className="rounded-3xl">
+    <div className="max-w-5xl mx-auto">
+      <h2 className="text-5xl font-bold text-white text-center mb-16">
+        Whom We Serve
+      </h2>
+
+      <div className="relative">
+        <div className="flex justify-between gap-20 mb-20">
+          <div className="text-white text-2xl font-medium text-wrap">
+            Muslims in Crypto that want to pay Zakat
+          </div>
+          <div className="text-white text-2xl font-medium lg:ml-48">
+            Muslims in Crypto that want to do Sodaqaat
+          </div>
+        </div>
+
+        <div className="absolute left-1/2 top-0 -translate-x-1/2 w-36 h-full">
+          <div className="absolute top-[1.125rem] w-full h-0.5 bg-gradient-to-r from-transparent via-orange-400 to-transparent"
+            style={{
+              backgroundImage: 'linear-gradient(90deg, transparent 50%, #FB923C 50%)',
+              backgroundSize: '8px 1px',
+            }}
+          />
+          {/* Vertical line */}
+          <div className="absolute left-1/2 top-[1.125rem] w-0.5 h-24 bg-gradient-to-b from-orange-400 to-transparent"
+            style={{
+              backgroundImage: 'linear-gradient(180deg, #FB923C 50%, transparent 50%)',
+              backgroundSize: '1px 8px',
+            }}
+          />
+          
+        </div>
+
+        <div className="text-white text-2xl font-medium text-center max-w-2xl mx-auto mt-24">
+          Anybody that wants to donate to any charity cause we have.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section>
+          <div className='px-60'>
+            <MissionAndVision />
           </div>
         </section>
+        <section>
+          <CoreValues />
+        </section>
+        <section className='-mb-24'>
+          <h1 className="text-4xl text-center md:text-5xl font-bold">
+            Meet our
+            <span className="text-orange-400"> Team</span>
+          </h1>
+          <p className="max-w-3xl mx-auto text-gray-300 text-center mt-3 font-extralight">
+          Meet the incredible team behind our innovative solution, leveraging the power of Web3
+to give Charity.
+          </p>
+          <TeamCards />
+        </section>
+        <section>
+          <FAQS />
+        </section>
+        <Footer />
       </main>
-
-      <footer className="bg-indigo-800 py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p>&copy; {new Date().getFullYear()} ZakatChain. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   )
 }
