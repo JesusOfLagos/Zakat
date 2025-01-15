@@ -27,57 +27,31 @@ const teamMembers: TeamMember[] = [
         image: osinowo.src,
     },
     {
-        name: "Mahmud Olaleye",
-        role: "Communication & Operations",
+        name: "Muhammad Abdus-salam",
+        role: "Lead Designer",
         image: osinowo.src,
     },
     {
-        name: "Mahmud Olaleye",
-        role: "Communication & Operations",
+        name: "Muhammad Osinowo",
+        role: "Sheriah Compliance Advisor",
         image: jrd.src,
     },
     {
-        name: "Mahmud Olaleye",
-        role: "Communication & Operations",
+        name: "Teslim Ilias",
+        role: "Marketing Lead",
         image: leye.src,
     },
 
     {
-        name: "Mahmud Olaleye",
-        role: "Communication & Operations",
+        name: "Talha Abdussalam",
+        role: "Visual Designer",
         image: osinowo.src,
     },
     {
-        name: "Mahmud Olaleye",
-        role: "Communication & Operations",
+        name: "Muminat-Darla",
+        role: "COntent Manager",
         image: jrd.src,
-    },
-    {
-        name: "Mahmud Olaleye",
-        role: "Communication & Operations",
-        image: leye.src,
-    },
-
-    {
-        name: "Mahmud Olaleye",
-        role: "Communication & Operations",
-        image: osinowo.src,
-    },{
-        name: "Mahmud Olaleye",
-        role: "Communication & Operations",
-        image: jrd.src,
-    },
-    {
-        name: "Mahmud Olaleye",
-        role: "Communication & Operations",
-        image: leye.src,
-    },
-
-    {
-        name: "Mahmud Olaleye",
-        role: "Communication & Operations",
-        image: osinowo.src,
-    },
+    }
 ];
 
 export const TeamCards: React.FC = () => {
