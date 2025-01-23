@@ -226,6 +226,13 @@ export default function LandingPage() {
               <Image src={usdt.src} alt="Tether" width={50} height={50} />
               <Image src={usdc.src} alt="USD Coin" width={50} height={50} />
               <Image src={shib.src} alt="Dogecoin" width={50} height={50} />
+              {/* Duplicate Icons for Seamless Loop */}
+              <Image src={bitcoin.src} alt="Bitcoin" width={50} height={50} />
+              <Image src={etherium.src} alt="Ethereum" width={50} height={50} />
+              <Image src={solana.src} alt="Solana" width={50} height={50} />
+              <Image src={usdt.src} alt="Tether" width={50} height={50} />
+              <Image src={usdc.src} alt="USD Coin" width={50} height={50} />
+              <Image src={shib.src} alt="Dogecoin" width={50} height={50} />
             </div>
           </div>
         </section>
